@@ -2,6 +2,7 @@ const app = require("./app");
 // const dotenv = require("dotenv");
 const cloudinary = require("cloudinary");
 const connectDatabase = require("./config/database");
+const port = process.env.PORT || 4000;
 
 //Handling Uncaught Exception
 process.on("uncaughtException", (err) => {
@@ -25,7 +26,7 @@ cloudinary.config({
 });
 
 const server = app.listen(process.env.PORT, () => {
-    console.log(`Server is working on http://localhost:${process.env.PORT}`);
+    console.log(`Server is working on ${port}`);
 });
 
 //Unhandled Promise Rejection
