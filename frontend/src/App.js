@@ -44,12 +44,13 @@ import About from "./component/layout/About/About";
 import NotFound from "./component/layout/Not Found/NotFound";
 
 function App() {
+  const url = "https://onlinemusicalwarehouse.onrender.com"
   const { isAuthenticated, user } = useSelector((state) => state.user);
 
   const [stripeApiKey, setStripeApiKey] = useState("");
 
   async function getStripeApiKey() {
-    const { data } = await axios.get("/api/v1/stripeapikey");
+    const { data } = await axios.get(url + "/api/v1/stripeapikey");
 
     setStripeApiKey(data.stripeApiKey);
   }

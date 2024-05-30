@@ -2,7 +2,7 @@
 
 Hi! My name is **Ayushi Hothi**, I have created this Project for my Bachelor Final Examination.
 
-**Live Link** https://onlinemusicalwarehouse.netlify.app/
+**Live Link** https://onlinemusicalwarehouse.onrender.com
 
 # Install Dependencies
 
