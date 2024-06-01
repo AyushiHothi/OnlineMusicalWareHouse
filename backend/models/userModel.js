@@ -32,6 +32,7 @@ const userSchema = new mongoose.Schema({
             type: String,
             required: [true, "Please Select Your Avatar"]
         },
+        required: [true, "Please Select Your Avatar"],
     },
     role: {
         type: String,
