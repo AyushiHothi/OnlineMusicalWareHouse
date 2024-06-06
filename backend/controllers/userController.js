@@ -29,7 +29,7 @@ exports.registerUser = catchAsyncErrors(async (req, res, next) => {
 
         sendToken(user, 201, res);
     } catch (error) {
-        res.status(500).json({ success: false, message: error.message });
+        res.status(500).json({ success: false, message: res.status(500).json({ success: false, message: "Please Select Your Avatar" }) });
     }
 });
 
