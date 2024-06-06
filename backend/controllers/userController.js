@@ -9,13 +9,20 @@ const cloudinary = require("cloudinary");
 //Register a User
 exports.registerUser = catchAsyncErrors(async (req, res, next) => {
     try {
-        const myCloud = await cloudinary.v2.uploader.upload(req.body.avatar, {
+        const { name, email, password, avatar } = req.body;
+
+        if (!avatar) {
+            return res.status(400).json({
+                success: false,
+                message: "Please select an avatar"
+            });
+        }
+
+        const myCloud = await cloudinary.uploader.upload(avatar, {
             folder: "avatars",
             width: 150,
             crop: "scale",
         });
-
-        const { name, email, password } = req.body;
 
         const user = await User.create({
             name,
