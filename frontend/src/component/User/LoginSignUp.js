@@ -45,6 +45,11 @@ const LoginSignUp = ({ history, location }) => {
   const registerSubmit = (e) => {
     e.preventDefault();
 
+    if (!avatar || avatar === "/Profile.png") {
+      alert.error("Please select an avatar");
+      return;
+    }
+
     const myForm = new FormData();
 
     myForm.set("name", name);
