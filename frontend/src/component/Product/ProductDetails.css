@@ -185,35 +185,42 @@
     overflow: auto;
 }
 
-.ReviewCard {
-    flex: none;
-
+.reviewCard {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.226);
     border: 1px solid rgba(56, 56, 56, 0.116);
     width: 300px;
-    /* Define a fixed width for the card */
+    /* Fixed width for each review card */
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 1vmax;
-    padding: 3vmax;
+    padding: 2vmax;
+    box-sizing: border-box;
+    /* Include padding and border in the element's width */
+    background-color: white;
 }
 
-.ReviewCard>img {
-    width: 200px;
-    height: 1px;
+.reviewCardImage {
+    width: 100px;
+    /* Fixed width for the image */
+    height: 100px;
+    /* Fixed height for the image */
     object-fit: cover;
     border-radius: 50%;
+    margin-bottom: 1vmax;
 }
 
-.ReviewCard>p {
+.reviewCard>p {
     color: rgba(0, 0, 0, 0.836);
     font: 600 0.9vmax "Roboto";
+    margin: 0.5vmax 0;
 }
 
-.ReviewCardComment {
+.reviewCardComment {
     color: rgba(0, 0, 0, 0.445);
     font: 300 0.8vmax cursive;
+    text-align: center;
+    margin: 0.5vmax 0;
 }
 
 .noReviews {
