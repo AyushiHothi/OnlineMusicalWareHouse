@@ -27,7 +27,7 @@ const userSchema = new mongoose.Schema({
                 // Password must contain at least one number, one special character, one uppercase letter, and one lowercase letter
                 return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(v);
             },
-            message: "Password must contain at least one number, one special character, one uppercase letter, and one lowercase letter"
+            message: "Password must be Strong"
         }
     },
     avatar: {
